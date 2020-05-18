@@ -1,0 +1,70 @@
+<!--pages/home/home.wxml-->
+<!-- 导航区 start -->
+<view id="header">
+  <navigator url="../search/search">
+    <view class="search   pull-left">
+    <image src="../../images/search.png" style="width:42rpx;height:44rpx;"></image>
+  </view>
+  </navigator>
+  
+  <scroll-view scroll-x
+   class="channels pull-left "
+  scroll-into-view="{{activeChannel}}" 
+  scroll-with-animation="true">
+    <view
+      id = "{{item.id}}"
+      class="{{item.id == activeChannel ?  'active' : '' }}" 
+      wx:for="{{channels}}" bindtap="changeChannel" 
+      data-id="{{item.id}}"
+      data-index="{{index}}">
+      {{item.title}}
+     </view>
+  </scroll-view>
+  <view class="plus pull-left" bindtap="showChannel">
+    <image src="../../images/plus.png" style="width:42rpx;height:44rpx;"></image>
+  </view>
+
+  <view class="user pull-left">
+    <image src="../../images/user.png" style="width:42rpx;height:44rpx;"></image>
+  </view>
+</view>
+<!-- 导航区 end -->
+
+<!-- 内容区 start -->
+
+<view id="content" style="height:{{height}}">
+  <swiper current-item-id="{{activeChannel}}" bindchange="swiperChangeChannel"> 
+    <swiper-item data-index="{{index}}" wx:for="{{channels}}" class="" wx:for-item="channel" item-id="{{channel.id}}">
+      <scroll-view scroll-y class="news-list">
+        <view wx:for = "{{channel.data}}" class="item">
+             <navigator url="../detail/detail?id={{item.id}}">
+                <view class="title">{{item.title}}</view>
+                <view class="media">{{item.source}} 12 评论 </view>
+             </navigator>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
+  
+</view>
+<!-- 内容区 en -->
+
+<!-- 遮罩区 start -->
+<view id="mask" wx:if = "{{isShow}}">
+  <view class="close" bindtap="hideChannel">
+    <image src="../../images/close.png" style="width:32rpx;height:32rpx;"></image>
+  </view>
+  <!-- 频道 start -->
+  <view class="mine-channel">
+    <view class="title">
+      <text class="s-title">我的频道</text>
+      <text class="b-title">选中可以拖动排序</text>
+    </view>
+    <view class="channels" wx:for = "{{channels}}">
+      <view class="item">{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 频道 end -->
+</view>
+<!-- 遮罩区 end -->

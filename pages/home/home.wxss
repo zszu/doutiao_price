@@ -1,0 +1,140 @@
+/* pages/home/home.wxss */
+.bg{
+  background: #aef;
+}
+.error{
+  background: #f00;
+}
+.info{
+  background: orange;
+}
+.pull-left{
+  float: left;
+}
+.active{
+  border-bottom: solid 6rpx #f85959;
+  color: #f85959;
+}
+.time{
+  float:right;
+  margin-right:0rpx;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+#header{
+  height: 91rpx;
+  border: solid 1rpx  #e8e8e8;
+}
+#header .search{
+  height: 90rpx;
+  width: 90rpx;
+  padding-right: 5rpx;
+  /* 设置居中 */
+  display: flex;
+  /* 水平 */
+  justify-content: center;
+  align-items: center;
+}
+#header .channels{
+  width: 450rpx;
+  height: 90rpx;
+  /* 设置不换行 */
+  white-space: nowrap;
+}
+#header .channels view{
+  display: inline-block;
+  width: 64rpx;
+  height: 84rpx;
+  margin-right: 32rpx;
+  font-size: 32rpx;
+  line-height: 84rpx;
+}
+#header .plus{
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: solid 1rpx #ddd;
+  /* 设置阴影 */
+  box-shadow: -2rpx 0rpx 4rpx #ddd;
+}
+#header .user{
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content{
+  width: 100%;
+  height: 1000rpx;
+}
+#content swiper{
+  height: 100%;
+}
+.news-list{
+  height: 100%;
+  padding:0rpx 30rpx;
+  width: 690rpx;
+}
+.news-list .item{
+  min-height: 80rpx;
+  border-bottom: solid 1rpx #e8e8e8;
+  padding: 30rpx 0rpx;
+}
+.news-list .item .title{
+  font-size: 35rpx;
+}
+.news-list .item .media{
+  font-size: 23rpx;
+  color: #999999;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+#mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  background: white;
+  padding-top: 35rpx;
+  padding-left: 30rpx;
+}
+.mine-channels{
+  padding-top: 40rpx;
+}
+.title{
+  padding-bottom: 40rpx;
+}
+.title .s-title{
+  font-size: 40rpx;
+  font-weight: bold;
+  padding-right: 10rpx;
+}
+.title .b-title{
+  font-size: 30rpx;
+  color: #999999;
+}
+.channels .item{
+  width: 160rpx;
+  height: 80rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  background: #f5f5f5;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+

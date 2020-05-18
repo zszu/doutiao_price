@@ -1,0 +1,11 @@
+/* pages/test/test.wxss */
+.event{
+  background: #a90;
+  height: 100rpx;
+}
+.erro{
+  background: #f00;
+}
+.info{
+  background: orange;
+}

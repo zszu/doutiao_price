@@ -1,0 +1,16 @@
+<!--pages/test/test.wxml-->
+<!-- 数据绑定 -->
+<text>{{msg}}</text>
+
+<!-- 列表渲染 -->
+<view wx:for ="{{news}}">
+  <view>{{item}}</view>
+</view>
+<!-- 条件渲染 -->
+<view wx:if="{{!isVip}}">
+  <image src="../../images/test-1.png"></image>
+</view>
+<!-- 时间 -->
+<view class="event {{color}}" bindtap="tap"></view>
+
+
