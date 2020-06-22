@@ -31,7 +31,7 @@ Page({
         time:data.ptime,
       });
       var body = data.body;
-      console.log(body);
+      // console.log(body);
       //替换内容中图片注释
       for(var i=0;i<data.img.length;i++){
         body = body.replace(data.img[i].ref, '<img src="' + data.img[i].src+'"  />');

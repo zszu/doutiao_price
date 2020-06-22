@@ -37,10 +37,11 @@
     <swiper-item data-index="{{index}}" wx:for="{{channels}}" class="" wx:for-item="channel" item-id="{{channel.id}}">
       <scroll-view scroll-y class="news-list">
         <view wx:for = "{{channel.data}}" class="item">
-             <navigator url="../detail/detail?id={{item.docid}}" > 
+            <navigator url="../detail/detail?id={{item.docid}}" > 
                 <view class="title">{{item.title}}</view>
-                <view class="media">{{item.source}} 12 评论 </view>
-             </navigator>
+            </navigator>
+            <view class="media">{{item.source}} 12 评论 </view>
+            
         </view>
       </scroll-view>
     </swiper-item>
