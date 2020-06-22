@@ -17,7 +17,7 @@ input{
 }
 
 .input-content{
-  padding-top:8rpx;
+  padding-top:5rpx;
 }
 
 .input .search{
@@ -37,40 +37,29 @@ input{
 }
 
 #history{
+  padding:20rpx;
   min-height:20rpx;
   border:solid 1rpx #ddd;
   overflow: hidden;
 }
 
- .header{
-  padding:20rpx;
+#history .header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-bottom:solid 1px #ddd;
 }
 
-.header .title{
-  font-size: 28rpx;
-  line-height: 1.7em;
-  color:#999999;
+.content{
+  min-height: 100rpx;
 }
 
-#history .keywords{
-  overflow: hidden;
-  min-height:30rpx;
-}
-
-.keywords .item{
-  width:330rpx;
-  font-size: 28rpx;
-  padding:25rpx 20rpx;
+.content .history-word{
+  height:90rpx;
   border:solid 1rpx #ddd;
+  width:49%;
 }
 
-.keywords .item:nth-child(2n){
-  border-right: none;
-}
-
-.gap{
-  height: 20rpx;
-  background:#f5f5f5;
+#history .title{
+  font-size:28rpx;
 }

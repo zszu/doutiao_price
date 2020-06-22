@@ -1,5 +1,6 @@
 // pages/detail/detail.js
 var WxParse = require('../../wxParse/wxParse.js');
+const request=require("../../utils/requests.js");
 Page({
 
   /**
@@ -20,32 +21,30 @@ Page({
     var id = options.id;
     // var id = 'DVHVIBKF05372NVD';
     var that = this;
-    wx.request({
-      url:'http://c.m.163.com/nc/article/'+id+'/full.html',
-      success:function(res){
-        var data = (res.data[id]);
-        // console.log(res.data[id]);
-        that.setData({
-          title:data.title,
-          source:data.source,
-          time:data.ptime,
-        });
-        var body = data.body;
-        console.log(body);
-        //替换内容中图片注释
-        for(var i=0;i<data.img.length;i++){
-          body = body.replace(data.img[i].ref, '<img src="' + data.img[i].src+'"  />');
-        }
-        that.setData({
-          body:body
-        });
-        //  将HTML 转化成小程序可以识别 的内容
-
-        //解析html标签
-        WxParse.wxParse('body', 'html', body, that, 5);
-      
+    // console.log(options.id);return ;
+    request.getDetail(id , function(res){
+      var data = (res.data[id]);
+      // console.log(res);return;
+      that.setData({
+        title:data.title,
+        source:data.source,
+        time:data.ptime,
+      });
+      var body = data.body;
+      console.log(body);
+      //替换内容中图片注释
+      for(var i=0;i<data.img.length;i++){
+        body = body.replace(data.img[i].ref, '<img src="' + data.img[i].src+'"  />');
       }
+      that.setData({
+        body:body
+      });
+      //  将HTML 转化成小程序可以识别 的内容
+
+      //解析html标签
+      WxParse.wxParse('body', 'html', body, that, 5);
     });
+
   },
 
   /**

@@ -25,30 +25,14 @@
     <view class="title">历史记录</view>
     <view class="lajitong"><image src="../../images/garbage.png" style="width:32rpx;height:32rpx;"></image></view>
   </view>
-
-  <view class="keywords">
-    <view class="item pull-left">火箭签约安东尼</view>
-    <view class="item pull-left">火箭签约安东尼</view>
-    <view class="item pull-left">火箭签约安东尼</view>
-    <view class="item pull-left">火箭签约安东尼</view>
+  <view style='clear:both'></view>
+  <view class="content">
+     <view class="history-word pull-left">1</view>
+     <view class="history-word pull-left">2</view>
+     <view class="history-word pull-left">3</view>
   </view>
 </view>
 <!-- 历史记录  end -->
 
-<view class="gap"></view>
-
 <!-- 搜索热词  start -->
-<view id="hotwords" class=''>
-  <view class="header">
-    <view class="title">搜索热词</view>
-    <view class="close"></view>
-  </view>
-
-  <view class="keywords">
-    <view class="item pull-left">火箭签约安东尼</view>
-    <view class="item pull-left">火箭签约安东尼</view>
-    <view class="item pull-left">火箭签约安东尼</view>
-    <view class="item pull-left">火箭签约安东尼</view>
-  </view>
-</view>
 <!-- 搜索热词  end -->

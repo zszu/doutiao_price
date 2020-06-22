@@ -37,7 +37,7 @@
     <swiper-item data-index="{{index}}" wx:for="{{channels}}" class="" wx:for-item="channel" item-id="{{channel.id}}">
       <scroll-view scroll-y class="news-list">
         <view wx:for = "{{channel.data}}" class="item">
-             <navigator url="../detail/detail?id={{item.id}}">
+             <navigator url="../detail/detail?id={{item.docid}}" > 
                 <view class="title">{{item.title}}</view>
                 <view class="media">{{item.source}} 12 评论 </view>
              </navigator>
@@ -62,7 +62,11 @@
       <text class="b-title">选中可以拖动排序</text>
     </view>
     <view class="channels" wx:for = "{{channels}}">
-      <view class="item">{{item.title}}</view>
+      <view class="item"
+        id = "{{item.id}}"
+        data-id="{{item.id}}"
+        data-index="{{index}}"
+        bindtap="mineChangeChannel">{{item.title}}</view>
     </view>
   </view>
   <!-- 频道 end -->
